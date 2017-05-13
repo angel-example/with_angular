@@ -1,0 +1,2 @@
+mongo_db: mongodb://localhost:27017/angel_notes
+jwt_key: A73hfYWnaC1kxABqkcqmaD32mfHAAQ2

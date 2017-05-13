@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/bin/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/app_menu/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/log_in/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/new_note/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/note_app/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/note_detail/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/note_form/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/note_list/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/components/sign_up/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/web/services/packages" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>

@@ -1,0 +1,9 @@
+<h1>Notes</h1>
+<ul *ngIf="auth.user == null">
+    <li><a [routerLink]="['/LogIn']">Log In</a></li>
+    <li><a [routerLink]="['/SignUp']">Sign Up</a></li>
+</ul>
+<ul *ngIf="auth.user != null">
+    <li>{{auth.user.username}}</li>
+    <li><a [routerLink]="['/NoteList']">View Notes</a></li>
+</ul>

@@ -1,0 +1,7 @@
+<form (submit)="handleSubmit()">
+    <input [(ngModel)]="note.title" placeholder="Note Title" type="text">
+    <br><br>
+    <textarea [(ngModel)]="note.text" placeholder="Note Text" rows="15"></textarea>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>

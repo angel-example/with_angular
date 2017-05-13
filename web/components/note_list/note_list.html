@@ -1,0 +1,13 @@
+<i *ngIf="auth.user == null" style="color: red;">
+    You must be logged in to view this page.
+</i>
+<div *ngIf="auth.user != null">
+    <a [routerLink]="['/NewNote']">Create new Note</a>
+    <br><br>
+    <i *ngIf="notes.isEmpty" style="color: blue;">
+        You have not created any notes.
+    </i>
+    <ul *ngIf="notes.isNotEmpty">
+        <li *ngFor="let note of notes"><a [routerLink]="['/NoteDetail', {id: note.id}]">{{note.title}}</a></li>
+    </ul>
+</div>
