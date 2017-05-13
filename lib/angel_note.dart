@@ -11,7 +11,7 @@ import 'validators.dart';
 Future<Angel> createServer() async {
   var app = new Angel();
   await app.configure(loadConfigurationFile());
-  // app.lazyParseBodies = true;
+  app.lazyParseBodies = true;
   app.injectSerializer(JSON.encode);
 
   var db = new Db(app.mongo_db);
