@@ -1,7 +1,7 @@
 name: angel_note
 dependencies:
-  angel_common: ^1.0.0
-  angel_security: ^1.0.0
+  angel_common: ^1.0.0 # Installs the main framework, along with several commonly-used Angel packages
+  angel_security: ^1.0.0 # Includes security functionality, as well as generic authorization hooks
   angular2: ^3.0.0
 dev_dependencies:
   browser: ^0.10.0

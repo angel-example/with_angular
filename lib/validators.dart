@@ -1,3 +1,5 @@
+/// Validators from `package:angel_validate` run on all platforms, and also
+/// use the matchers you are already familiar with from testing via `package:matcher`.
 import 'package:angel_validate/angel_validate.dart';
 
 final Validator USER = new Validator({'username,password': isNonEmptyString});

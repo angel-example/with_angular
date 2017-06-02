@@ -1,6 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="server.dart (PRODUCTION)" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="true">
-    <option name="checkedMode" value="false" />
+  <configuration default="false" name="server.dart (DEV)" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="true">
     <option name="envs">
       <entry key="ANGEL_ENV" value="production" />
     </option>
