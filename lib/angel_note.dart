@@ -121,7 +121,7 @@ Future<Angel> createServer() async {
   //
   // With this configuration, our application will serve `pub serve` resources in development
   // mode, but in production, serve pre-built resources from `pub build`.
-  var vDir = new VirtualDirectory();
+  var vDir = new VirtualDirectory(source: new Directory('web/'));
   await app.configure(vDir);
 
   // This is how we support push-state routing in Angel.
@@ -142,6 +142,12 @@ Future<Angel> createServer() async {
   // If you don't want to run any response finalizers (i.e. if you are writing directly to
   // the underlying `HttpResponse`), then set `willCloseItself` to `true` on a `ResponseContext`.
   app.responseFinalizers.add(gzip());
+
+  // From `package:angel_diagnostics`, this plug-in colorfully prints information about
+  // successful requests, as well as errors, to the console.
+  //
+  // You may optionally provide a log file to print to as well.
+  await app.configure(logRequests());
 
   // And of course, return our `Angel` instance! Now, we can start up identical servers
   // simply by calling `createServer`.

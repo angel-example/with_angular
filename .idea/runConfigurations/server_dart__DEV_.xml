@@ -1,7 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="server.dart (DEV)" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" singleton="true">
+    <option name="VMOptions" value="--enable-vm-service" />
     <option name="envs">
-      <entry key="ANGEL_ENV" value="production" />
+      <entry key="ANGEL_ENV" value="development" />
     </option>
     <option name="filePath" value="$PROJECT_DIR$/bin/server.dart" />
     <option name="workingDirectory" value="$PROJECT_DIR$" />

@@ -1,22 +1,23 @@
 import 'dart:io';
-import 'package:angel_common/angel_common.dart';
+
+import 'package:angel_hot/angel_hot.dart';
 import 'package:angel_note/angel_note.dart';
 
 main() async {
-  // Look familiar? We can call this function to produce an identical server each time.
-  // After all, we are the ones who wrote it. ;)
-  var app = await createServer();
 
-  // From `package:angel_diagnostics`, this plug-in colorfully prints information about
-  // successful requests, as well as errors, to the console.
-  //
-  // You may optionally provide a log file to print to as well.
-  await app.configure(logRequests());
+  // Hot reloading requires some configuration before starting.
+  // We configure the relevant directories for this project. You can add as many as you like
+  // There are far more options available when hot reloading than showed here
+  var hot = new HotReloader(createServer, [
+    new Directory('config'),
+    new Directory('lib'),
+    new Directory('web')
+  ]);
 
   // Use `app.startServer` to bind to a socket and listen for HTTP requests.
-  var server = await app.startServer(InternetAddress.ANY_IP_V4, 3000);
+  var server = await hot.startServer(InternetAddress.LOOPBACK_IP_V4, 3000);
 
   // `app.startServer` returns an `HttpServer` instance, and we can print information about it.
   // We can also access the server by getting `app.httpServer`.
-  print('Listening at http://${server.address.address}:${server.port}');
+  print('Hot Server Listening at http://${server.address.address}:${server.port}');
 }
