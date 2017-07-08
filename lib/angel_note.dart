@@ -121,7 +121,7 @@ Future<Angel> createServer() async {
   //
   // With this configuration, our application will serve `pub serve` resources in development
   // mode, but in production, serve pre-built resources from `pub build`.
-  var vDir = new VirtualDirectory(source: new Directory('web/'));
+  var vDir = new VirtualDirectory();
   await app.configure(vDir);
 
   // This is how we support push-state routing in Angel.
